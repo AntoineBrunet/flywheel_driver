@@ -1,0 +1,11 @@
+<launch>
+  <node name="flywheel_driver" pkg="flywheel_driver" type="node" output="screen">
+    <param name="flywheel_speed_a" value="7.14361e-07" />
+    <param name="flywheel_speed_b" value="0.000999959" />
+    <param name="flywheel_speed_c" value="205" />
+    <param name="flywheel_min_speed" value="5700" />
+    <param name="flywheel_max_speed" value="14400" />
+    <param name="flywheel_zero_signal" value="205" />
+    <param name="pwm_freq" value="50" />
+  </node> 
+</launch>

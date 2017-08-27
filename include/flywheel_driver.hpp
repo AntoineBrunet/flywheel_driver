@@ -22,6 +22,7 @@ class Controller {
 	private:
 		double fit_a, fit_b, fit_c;
 		double min_speed, max_speed;
+		int zero;
 
 		ros::NodeHandle node;
 		PCA9685 *controller;
