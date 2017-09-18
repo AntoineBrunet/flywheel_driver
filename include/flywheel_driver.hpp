@@ -10,8 +10,8 @@
 #define FW_NUMBER 6
 
 #include <ros/ros.h>
-#include <cmg_msgs/FlywheelSpeeds.h>
-#include <cmg_msgs/FlywheelSpeed.h>
+#include <cmg_msgs/SpeedList.h>
+#include <cmg_msgs/Speed.h>
 
 #include "PCA9685.h"
 
@@ -30,7 +30,7 @@ class Controller {
 		double joint_lower_limit, joint_upper_limit, d009a_limit_coef, d150a_limit_coef;
 		ros::Subscriber sub_fwset;
 
-		void chatterFW (const cmg_msgs::FlywheelSpeedsConstPtr &state);
+		void chatterFW (const cmg_msgs::SpeedListConstPtr &state);
 
 };
 

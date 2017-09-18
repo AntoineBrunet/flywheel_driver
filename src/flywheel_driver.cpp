@@ -20,8 +20,8 @@ Controller::Controller()
 	ROS_INFO("A:%f B:%f C:%f", fit_a, fit_b, fit_c);
 }
 
-void Controller::chatterFW (const cmg_msgs::FlywheelSpeedsConstPtr &state){
-	for (const cmg_msgs::FlywheelSpeed& speed : state->speeds) {
+void Controller::chatterFW (const cmg_msgs::SpeedListConstPtr &state){
+	for (const cmg_msgs::Speed& speed : state->speeds) {
 		float rs = speed.speed;
 		uint8_t id = speed.id;
 		int req_speed = zero;
