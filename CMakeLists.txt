@@ -127,7 +127,8 @@ add_library(I2C lib/I2C/src/I2C.cpp)
 target_link_libraries(I2C ${catkin_LIBRARIES})
 
 add_library(PCA9685 lib/PCA9685/src/PCA9685.cpp)
-target_link_libraries(I2C PCA9685 ${catkin_LIBRARIES})
+add_dependencies(PCA9685 I2C)
+target_link_libraries(PCA9685 I2C ${catkin_LIBRARIES})
 
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries
