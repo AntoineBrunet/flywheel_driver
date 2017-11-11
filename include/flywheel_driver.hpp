@@ -20,13 +20,16 @@ class Controller {
 		Controller();
 
 	private:
-		double fit_a, fit_b, fit_c;
+		double ref_speed;
 		double min_speed, max_speed;
-		int zero;
+		int zero, init_sig;
+		double init_time;
 
 		ros::NodeHandle node;
 		PCA9685 *controller;
 
+		std::vector<int> ids;
+		std::vector<int> cmds;
 		double joint_lower_limit, joint_upper_limit, d009a_limit_coef, d150a_limit_coef;
 		ros::Subscriber sub_fwset;
 
