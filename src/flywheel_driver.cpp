@@ -23,7 +23,7 @@ Controller::Controller()
 
 	controller = new PCA9685(I2C_BUS, I2C_ADDRESS);
 	controller->setPWMFreq(freq);
-	sub_fwset = node.subscribe("flywheel_driver/speeds", 100, &Controller::chatterFW, this);
+	sub_fwset = node.subscribe("/fw/cmd", 100, &Controller::chatterFW, this);
 	ROS_INFO("Flywheel controller is ready...");
 	ROS_INFO("Calibrated for %f rpm", ref_speed);
 
