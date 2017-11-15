@@ -1,0 +1,6 @@
+[submodule "lib/I2C"]
+	path = lib/I2C
+	url = https://github.com/TeraHz/I2C.git
+[submodule "lib/PCA9685"]
+	path = lib/PCA9685
+	url = https://github.com/TeraHz/PCA9685.git
